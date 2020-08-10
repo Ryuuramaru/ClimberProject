@@ -1127,7 +1127,7 @@ MonoBehaviour:
   canJump: 1
   jumpHeight: 4
   grounded: 0
-  rigidbody: {fileID: 1875133433}
+  rb: {fileID: 1875133433}
   canDoubleJump: 1
 --- !u!114 &1875133437
 MonoBehaviour:
@@ -1145,7 +1145,8 @@ MonoBehaviour:
   rawspeed: 13
   gravity: 40
   maxVelocityChange: 10
-  rigidbody: {fileID: 1875133433}
+  rb: {fileID: 1875133433}
+  grounded: 0
 --- !u!1 &1897634252
 GameObject:
   m_ObjectHideFlags: 0

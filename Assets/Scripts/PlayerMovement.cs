@@ -7,23 +7,35 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour
 {
 
-	public float speed;
+	private float speed;
 	public float rawspeed;
 	public float gravity;
 	public float maxVelocityChange = 10.0f;
-	public Rigidbody rigidbody;
-	
-	
+	public Rigidbody rb;
+	//private bool grounded = false;
+
+
 
 	void Awake()
 	{
-		rigidbody.freezeRotation = true;
-		rigidbody.useGravity = false;
+		rb.freezeRotation = true;
+		rb.useGravity = false;
 	}
 
-	void FixedUpdate()
+	/*
+	void OnCollisionStay()
 	{
-		
+		grounded = true;
+	}
+
+	void OnCollisionExit()
+    {
+		grounded = false;
+    }
+	*/
+    void FixedUpdate()
+	{
+
 			if (Input.GetButton("Run")) speed = rawspeed * 1.75f; //Normal or Run speed function
 			else speed = rawspeed;
 
@@ -33,17 +45,15 @@ public class PlayerMovement : MonoBehaviour
 			targetVelocity *= speed;
 
 			// Apply a force that attempts to reach our target velocity
-			Vector3 velocity = rigidbody.velocity;
+			Vector3 velocity = rb.velocity;
 			Vector3 velocityChange = (targetVelocity - velocity);
 			velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
 			velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
 			velocityChange.y = 0;
-			rigidbody.AddForce(velocityChange, ForceMode.VelocityChange);
-
+			rb.AddForce(velocityChange, ForceMode.VelocityChange);
 		
-
 		    // We apply gravity manually for more tuning control
-			rigidbody.AddForce(new Vector3(0, -gravity * rigidbody.mass, 0));
+			rb.AddForce(new Vector3(0, -gravity * rb.mass, 0));
 
 		
 	}

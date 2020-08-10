@@ -6,23 +6,22 @@ public class PlayerJump : MonoBehaviour
 {
     
 	public float gravity;
-	public bool canJump = true;
 	public float jumpHeight;
-	public bool grounded = false;
-	public Rigidbody rigidbody;
-	public bool canDoubleJump = true;
+	private bool grounded = false;
+	public Rigidbody rb;
+	private bool canDoubleJump = true;
 
 	// Update is called once per frame
 	void Update()
     {
-		Vector3 velocity = rigidbody.velocity;
+		Vector3 velocity = rb.velocity;
 		if (grounded)
 		{   // Jump
 			canDoubleJump = false;
 
 			if (Input.GetButtonDown("Jump"))
 			{
-				rigidbody.velocity = new Vector3(velocity.x, CalculateJumpVerticalSpeed(), velocity.z);
+				rb.velocity = new Vector3(velocity.x, CalculateJumpVerticalSpeed(), velocity.z);
 				grounded = false;
 				canDoubleJump = true;
 			}
@@ -32,7 +31,7 @@ public class PlayerJump : MonoBehaviour
 		{
 			if (Input.GetButtonDown("Jump") && canDoubleJump)
 			{
-				rigidbody.velocity = new Vector3(velocity.x, CalculateJumpVerticalSpeed(), velocity.z);
+				rb.velocity = new Vector3(velocity.x, CalculateJumpVerticalSpeed(), velocity.z);
 				canDoubleJump = false;
 			}
 		}

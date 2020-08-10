@@ -1123,10 +1123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb2ec1c2bdbdc349b3fef4e12ca42aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  rawspeed: 0
-  gravity: 30
-  maxVelocityChange: 10
+  gravity: 40
   canJump: 1
   jumpHeight: 4
   grounded: 0
@@ -1144,15 +1141,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e6ac4324fe30b4eb7ce86a05003a7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  rawspeed: 10
-  gravity: 30
+  speed: 0
+  rawspeed: 13
+  gravity: 40
   maxVelocityChange: 10
-  canJump: 1
-  jumpHeight: 4
-  grounded: 0
   rigidbody: {fileID: 1875133433}
-  canDoubleJump: 1
 --- !u!1 &1897634252
 GameObject:
   m_ObjectHideFlags: 0

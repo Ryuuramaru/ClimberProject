@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class jump : MonoBehaviour
+public class PlayerJump : MonoBehaviour
 {
     
 	public float gravity;

@@ -11,12 +11,9 @@ public class Movementtry2 : MonoBehaviour
 	public float rawspeed;
 	public float gravity;
 	public float maxVelocityChange = 10.0f;
-	public bool canJump = true;
-	public float jumpHeight;
-	private bool grounded = false;
 	public Rigidbody rigidbody;
-
-
+	
+	
 
 	void Awake()
 	{
@@ -43,29 +40,15 @@ public class Movementtry2 : MonoBehaviour
 			velocityChange.y = 0;
 			rigidbody.AddForce(velocityChange, ForceMode.VelocityChange);
 
-		if (grounded)
-		{   // Jump
-			if (canJump && Input.GetButton("Jump"))
-			{
-				rigidbody.velocity = new Vector3(velocity.x, CalculateJumpVerticalSpeed(), velocity.z);
-			}
-		}
+		
 
-		// We apply gravity manually for more tuning control
-		rigidbody.AddForce(new Vector3(0, -gravity * rigidbody.mass, 0));
+		    // We apply gravity manually for more tuning control
+			rigidbody.AddForce(new Vector3(0, -gravity * rigidbody.mass, 0));
 
-		grounded = false;
+		
 	}
 
-	void OnCollisionStay()
-	{
-		grounded = true;
-	}
 
-	float CalculateJumpVerticalSpeed()
-	{
-		// From the jump height and gravity we deduce the upwards speed 
-		// for the character to reach at the apex.
-		return Mathf.Sqrt(2 * jumpHeight * gravity);
-	}
+
+
 }

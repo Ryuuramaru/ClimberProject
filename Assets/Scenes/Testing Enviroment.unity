@@ -1057,6 +1057,7 @@ GameObject:
   - component: {fileID: 1875133434}
   - component: {fileID: 1875133433}
   - component: {fileID: 1875133437}
+  - component: {fileID: 1875133435}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -1110,6 +1111,27 @@ CapsuleCollider:
   m_Height: 2.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1875133435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875133431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb2ec1c2bdbdc349b3fef4e12ca42aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  rawspeed: 0
+  gravity: 30
+  maxVelocityChange: 10
+  canJump: 1
+  jumpHeight: 4
+  grounded: 0
+  rigidbody: {fileID: 1875133433}
+  canDoubleJump: 1
 --- !u!114 &1875133437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1128,7 +1150,9 @@ MonoBehaviour:
   maxVelocityChange: 10
   canJump: 1
   jumpHeight: 4
+  grounded: 0
   rigidbody: {fileID: 1875133433}
+  canDoubleJump: 1
 --- !u!1 &1897634252
 GameObject:
   m_ObjectHideFlags: 0

@@ -216,7 +216,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 29257969}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 358.1, y: 3, z: 0}
+  m_LocalPosition: {x: 351.48, y: 2.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 440327165}
@@ -240,7 +240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 320b1c2af77554f99a1658df4a6d3d5c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.80666673
+      value: -1.28
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 320b1c2af77554f99a1658df4a6d3d5c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -375,7 +375,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269688156}
   m_LocalRotation: {x: 0.0005927382, y: 0.999452, z: -0.00061986706, w: -0.03309235}
-  m_LocalPosition: {x: 0.017, y: 0.894, z: 0.228}
+  m_LocalPosition: {x: 0.02, y: 0.47, z: 0.23}
   m_LocalScale: {x: 1.0151609, y: 0.6666673, z: 1.0000656}
   m_Children: []
   m_Father: {fileID: 1875133432}
@@ -740,13 +740,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 482596211}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 500, y: 50, z: 0}
-  m_LocalScale: {x: 1, y: 101, z: 1000}
+  m_LocalRotation: {x: -0.06378046, y: 0.37233528, z: 0.030925876, w: 0.92538756}
+  m_LocalPosition: {x: 394.73, y: 5.53, z: -37.64}
+  m_LocalScale: {x: 1, y: 32.91582, z: 29.62392}
   m_Children: []
   m_Father: {fileID: 2121036201}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -8.11, y: 43.795, z: 0.564}
 --- !u!65 &482596213
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -926,7 +926,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285908414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1875133432}

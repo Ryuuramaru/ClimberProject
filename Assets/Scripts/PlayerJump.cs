@@ -17,16 +17,15 @@ public class PlayerJump : MonoBehaviour
 		Vector3 velocity = rb.velocity;
 		if (grounded)
 		{   // Jump
-			canDoubleJump = false;
+			//canDoubleJump = false; not work
 
 			if (Input.GetButtonDown("Jump"))
 			{
 				rb.velocity = new Vector3(velocity.x, CalculateJumpVerticalSpeed(), velocity.z);
-				grounded = false;
 				canDoubleJump = true;
 			}
 		}
-		//Double jump hopefully
+		//Double jump hopefully if not triple randomly
 		else
 		{
 			if (Input.GetButtonDown("Jump") && canDoubleJump)
@@ -42,7 +41,12 @@ public class PlayerJump : MonoBehaviour
 	{
 		grounded = true;
 	}
-	float CalculateJumpVerticalSpeed()
+
+    private void OnCollisionExit(Collision collision)
+    {
+		grounded = false;
+    }
+    float CalculateJumpVerticalSpeed()
 	{
 		// From the jump height and gravity we deduce the upwards speed 
 		// for the character to reach at the apex.

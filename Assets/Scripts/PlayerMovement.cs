@@ -54,11 +54,5 @@ public class PlayerMovement : MonoBehaviour
 		
 		    // We apply gravity manually for more tuning control
 			rb.AddForce(new Vector3(0, -gravity * rb.mass, 0));
-
-		
 	}
-
-
-
-
 }

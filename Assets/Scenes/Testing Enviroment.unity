@@ -154,7 +154,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 1.6
-  m_Height: 6
+  m_Height: 7
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &29257971
@@ -195,12 +195,12 @@ NavMeshAgent:
   m_GameObject: {fileID: 29257969}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1.6
-  m_Speed: 50
-  m_Acceleration: 50
+  m_Radius: 1.75
+  m_Speed: 15
+  m_Acceleration: 20
   avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 2
+  m_AngularSpeed: 1
+  m_StoppingDistance: 10
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -1081,7 +1081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4c75475b4102043ac8a2ee8dccc3d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1285908414}
+  player: {fileID: 1875133431}
 --- !u!4 &885247009
 Transform:
   m_ObjectHideFlags: 0

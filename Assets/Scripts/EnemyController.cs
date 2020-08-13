@@ -7,6 +7,8 @@ public class EnemyController : MonoBehaviour
 {
     public float lookRadius;
 
+    public static EnemyController instance;
+
     Transform target;
     NavMeshAgent agent;
     
@@ -14,6 +16,8 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         target = PlayerManager.instance.player.transform;
+
+        instance = this;
 
         agent = GetComponent<NavMeshAgent>();
     }
